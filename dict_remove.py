@@ -4,9 +4,14 @@ dict1 = {"C programming" : ".c",
          "C plus plus" : ".cpp-mistyped",
          "Python" : ".py",
          "one" : 1,
-         2 : "two"
+         "two":2
          }
 
-print(dict1)
-del dict1['Python']
-print(dict1)
+print("items in dictionary before deletion :", dict1)
+print("Enter key to be deleted")
+key_del=input()
+for w in dict1:
+    if w==key_del:
+        del dict1[w]
+        break
+print("items in dictionary after deletion operation:", dict1)
